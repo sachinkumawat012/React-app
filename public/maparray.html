@@ -1,0 +1,31 @@
+<script>
+const oldarr = ['ram', 'lakhan', 'bharat', 'shtrughan']
+console.log(oldarr[0])
+console.log(oldarr[1])
+console.log(oldarr[2])
+console.log(oldarr[3])
+
+const newarr = oldarr.map(function(currentvalue, index, arr){
+    return currentvalue + " " + 'indexvalue' + " " + index + " " + 'array bilongs to' + " " + arr
+})
+
+const arr = [1,2,3,4,5,6,7,8,9,10]
+const outer = arr.map(function(val){
+    return val*2
+    })
+
+console.log(newarr)
+console.log(outer)
+
+const listofobject = [
+    {id:1, name:"anuj"},
+    {id:2, name:"annu"},
+    {id:3, name:"anju"},
+]
+
+const arr1 = listofobject.map((val) => {
+    return `my name is ${val.name} and id is ${val.id}`
+})
+
+console.log(arr1)
+</script>
