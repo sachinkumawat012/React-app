@@ -955,4 +955,237 @@ ReactDOM.render(
 */
 
 // =======================STYLED COMPONENTS===============================================
+/*
+import './index.css'
+import styled from 'styled-components'
 
+const Style =  () => {
+
+    const Div = styled.div`
+        background-color: green;
+        color: ${(props)=>props.col};
+        width: 100%;
+        height:100%;
+        flex-direction: column;
+        border: 2px solid sandybrown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        `
+    // Instead of using saperate variables for every styled component we can wrap styled components in wrappers
+    // we can use variable as well
+    
+    const myfavcolor = "gold"
+
+    const Wrapper = styled.section`
+    button{
+        background-color: aquamarine;
+        color: darkorange;
+        border-radius: 50px;
+
+    &:focus{
+        box-shadow: #3c4fe0 0 0 0 1 1.5px inset, rbga(45,35,66,0.4) 0 2px 4px,
+        rbga(45,35,66,0.4) 0 7px 13px -3px, #3c4fe0 0 -3px inset;
+    }
+    &:hover{
+        color:cadetblue;
+    }
+   
+    }
+// NESTING OF styled components p->span->b
+    p{
+        color: ${myfavcolor};
+        font-size: 20px;
+        font-weight: 500;
+        span{
+            color:orange;
+            b{
+                color:yellow
+            }
+        }
+    }
+}
+    `
+
+    return(
+        <>
+        <Div col='red'> styled components 
+        <Wrapper>
+            <button bg='green'>TestingButton</button>
+            <p>Many of our components require <span>the use of JavaScript to function</span>. <b> Specifically,</b> they require our own JavaScript plugins and Popper.</p>
+        </Wrapper>
+        </Div>
+        </>
+    )
+}
+
+ReactDOM.render(
+    <Style/>,
+    document.getElementById('root')
+)
+*/
+
+// ==========================THEME PROVIDER STYLED COMPONENT=======================================
+/*
+import './index.css'
+import styled, {ThemeProvider} from 'styled-components'
+
+const Style =  () => {
+
+    const theme = {
+        color:{
+            textColor:'red',
+            backgroundcolor:'cadetblue',
+        },
+        };
+
+    const Div = styled.div`
+        background-color: ${({theme}) => theme.color.backgroundcolor};
+        color: ${(props)=>props.col};
+        width: 100%;
+        height:100%;
+        flex-direction: column;
+        border: 2px solid sandybrown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        `
+    // Instead of using saperate variables for every styled component we can wrap styled components in wrappers
+    // we can use variable as well
+    
+    const myfavcolor = "gold"
+
+    const Wrapper = styled.section`
+    button{
+        background-color: cyan;
+        color: darkorange;
+        border-radius: 50px;
+
+    &:focus{
+        box-shadow: #3c4fe0 0 0 0 1 1.5px inset, rbga(45,35,66,0.4) 0 2px 4px,
+        rbga(45,35,66,0.4) 0 7px 13px -3px, #3c4fe0 0 -3px inset;
+    }
+    &:hover{
+        color:cadetblue;
+    }
+   
+    }
+// NESTING OF styled components p->span->b
+    p{
+        color: ${myfavcolor};
+        font-size: 20px;
+        font-weight: 500;
+        span{
+            color:orange;
+            b{
+                color:yellow
+            }
+        }
+    }
+}
+    `
+    return(
+        <ThemeProvider theme={theme}>
+        <Div col='red'> styled components 
+        <Wrapper>
+            <button bg='green'>TestingButton</button>
+            <p>Many of our components require <span>the use of JavaScript to function</span>. <b> Specifically,</b> they require our own JavaScript plugins and Popper.</p>
+        </Wrapper>
+        </Div>
+        </ThemeProvider>
+    )
+}
+
+ReactDOM.render(
+    <Style/>,
+    document.getElementById('root')
+)
+*/
+
+// =================== GLOBAL STYLE COMPONENT =====================================
+
+/*
+// import './index.css'     // instead of using external css use globalstylecomponent
+
+
+import { GlobalStyle } from './Globalstylecomponent'
+import styled, {ThemeProvider} from 'styled-components'
+
+const Style =  () => {
+
+    const theme = {
+        color:{
+            textColor:'red',
+            backgroundcolor:'cadetblue',
+        },
+        };
+
+    const Div = styled.div`
+        background-color: ${({theme}) => theme.color.backgroundcolor};
+        color: ${(props)=>props.col};
+        width: 100%;
+        height:100%;
+        flex-direction: column;
+        border: 2px solid sandybrown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        `
+    // Instead of using saperate variables for every styled component we can wrap styled components in wrappers
+    // we can use variable as well
+    
+    const myfavcolor = "gold"
+
+    const Wrapper = styled.section`
+    button{
+        background-color: cyan;
+        color: darkorange;
+        border-radius: 50px;
+
+    &:focus{
+        box-shadow: #3c4fe0 0 0 0 1 1.5px inset, rbga(45,35,66,0.4) 0 2px 4px,
+        rbga(45,35,66,0.4) 0 7px 13px -3px, #3c4fe0 0 -3px inset;
+    }
+    &:hover{
+        color:cadetblue;
+    }
+   
+    }
+// NESTING OF styled components p->span->b
+    p{
+        color: ${myfavcolor};
+        font-size: 20px;
+        font-weight: 500;
+        span{
+            color:orange;
+            b{
+                color:yellow
+            }
+        }
+    }
+}
+    `
+    return(
+        <ThemeProvider theme={theme}>
+        <GlobalStyle/>
+        <Div col='red'> styled components 
+        <Wrapper>
+            <button bg='green'>TestingButton</button>
+            <p>Many of our components require <span>the use of JavaScript to function</span>. <b> Specifically,</b> they require our own JavaScript plugins and Popper.</p>
+        </Wrapper>
+        </Div>
+        </ThemeProvider>
+    )
+}
+
+ReactDOM.render(
+    <Style/>,
+    document.getElementById('root')
+)
+*/
+// =========================================================================
+
+// =======================USE BOOTSTRAP IN THE REACT ==========================
