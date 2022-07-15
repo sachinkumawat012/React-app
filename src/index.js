@@ -1189,3 +1189,21 @@ ReactDOM.render(
 // =========================================================================
 
 // =======================USE BOOTSTRAP IN THE REACT ==========================
+/*
+import Boot from './bootsp'
+
+
+ReactDOM.render(
+    <Boot/>,
+    document.getElementById('root')
+)
+*/
+// =====================================================================
+
+// =========================================================================
+
+import Accord from './accordino/Accodino'
+
+ReactDOM.render(
+    <Accord/>, document.getElementById('root')
+)
