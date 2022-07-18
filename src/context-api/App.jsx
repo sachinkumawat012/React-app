@@ -5,10 +5,15 @@ import ComC from "./ComC";
 // creating the context 
 
 const Firstname = createContext();
+const Lastname = createContext();
 
 const App = () => {
     return(<div>
-        <Firstname.Provider value="Sachin"><ComC/></Firstname.Provider>
+        <Firstname.Provider value="Sachin">
+        <Lastname.Provider value={'Kumawat'}>
+        <ComC/>
+        </Lastname.Provider>
+        </Firstname.Provider>
         <Firstname.Provider value="Simmi"><ComA/></Firstname.Provider>
         <ComA/>
         </div>)
@@ -16,4 +21,4 @@ const App = () => {
 };
 
 export default App;
-export { Firstname };
+export { Firstname, Lastname };
