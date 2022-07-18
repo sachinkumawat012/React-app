@@ -1200,10 +1200,23 @@ ReactDOM.render(
 */
 // =====================================================================
 
-// =========================================================================
-
+// ====================Accordino example ==========================================
+/*
 import Accord from './accordino/Accodino'
 
 ReactDOM.render(
     <Accord/>, document.getElementById('root')
+)
+*/
+
+// =============================================================================
+
+// ================================google keep clone=====================================
+
+import App from './google-keep/App'
+
+
+ReactDOM.render(
+    <App/>,
+    document.getElementById('root')
 )
