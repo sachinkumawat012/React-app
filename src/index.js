@@ -24,7 +24,7 @@
 
 //==============  NEW JAVASCRIPT SYNTAX  =====================//
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 
 // ReactDOM.render(<h1>Hello from modern javascript </h1>, document.getElementById('root'));
@@ -1225,7 +1225,7 @@ ReactDOM.render(
 
 // ============================CONTEXT API ===========================================
 
-import App from './context-api/App';
+import App from './useEffects/App'
 
 ReactDOM.render(
     <App/>,
