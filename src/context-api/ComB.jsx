@@ -9,7 +9,7 @@ import ComC from "./ComC";
 //     )
 
 const ComB = () => {
-    return <ComC/>
+    return  <ComC/>
 };
 
 export default ComB;

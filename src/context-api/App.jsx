@@ -1,6 +1,7 @@
 import React, {createContext} from "react";
 import ComA from "./ComA";
 import ComC from "./ComC";
+import ComD from "./ComD";
 
 // creating the context 
 
@@ -16,6 +17,12 @@ const App = () => {
         </Firstname.Provider>
         <Firstname.Provider value="Simmi"><ComA/></Firstname.Provider>
         <ComA/>
+
+        <Firstname.Provider value="Sachin">
+        <Lastname.Provider value={'Kumawat'}>
+        <ComD/>
+        </Lastname.Provider>
+        </Firstname.Provider>
         </div>)
 
 };
