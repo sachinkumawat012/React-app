@@ -1212,7 +1212,7 @@ ReactDOM.render(
 // =============================================================================
 
 // ================================google keep clone=====================================
-
+/*
 import App from './google-keep/App'
 
 
@@ -1220,3 +1220,13 @@ ReactDOM.render(
     <App/>,
     document.getElementById('root')
 )
+*/
+// =================================================================================
+
+// ============================CONTEXT API ===========================================
+
+import App from './context-api/App';
+
+ReactDOM.render(
+    <App/>,
+    document.getElementById('root'))
