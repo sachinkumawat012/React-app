@@ -6,6 +6,7 @@ const App = () =>
     const [nums, setNums] = useState(5);
     useEffect(()=>{
         alert("You have clicked the button")
+        document.title = `You clicke the button ${num} times`
     }, [num]);
     
 
