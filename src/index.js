@@ -1235,9 +1235,24 @@ ReactDOM.render(
 
 
 // =========================STATE WISE COVID TRACKER============================================
-
+/*
 import App from './Axios/App'
 
 ReactDOM.render(
     <App/>,
+    document.getElementById('root'))
+*/
+// ===============================================================================
+
+
+// =============================== REACT ROUTER ==================================
+
+import { BrowserRouter } from 'react-router-dom'
+
+import App from './react-router/App'
+
+ReactDOM.render(
+    <BrowserRouter>
+    <App/>
+    </BrowserRouter>,
     document.getElementById('root'))

@@ -1,0 +1,28 @@
+.active_class{
+    text-decoration: dashed;
+    color: aqua;
+    background-color: brown;
+}
+.menu_class{
+width: 100%;
+line-height: 60px;
+background-color: darkolivegreen;
+display: flex;
+justify-content: space-around;
+}
+
+.searchbar{
+
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.searchbar input{
+
+    margin: 30px 0px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(182, 213, 246);
+}
