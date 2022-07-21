@@ -1246,10 +1246,25 @@ ReactDOM.render(
 
 
 // =============================== REACT ROUTER ==================================
-
+/*
 import { BrowserRouter } from 'react-router-dom'
 
 import App from './react-router/App'
+
+ReactDOM.render(
+    <BrowserRouter>
+    <App/>
+    </BrowserRouter>,
+    document.getElementById('root'))
+
+*/
+// ====================================================================================
+
+
+// ========================== RESPONSIVE WEBSITE =======================================
+import { BrowserRouter } from 'react-router-dom';
+import App from './responsive_website/App';
+
 
 ReactDOM.render(
     <BrowserRouter>
