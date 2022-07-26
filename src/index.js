@@ -1262,6 +1262,7 @@ ReactDOM.render(
 
 
 // ========================== RESPONSIVE WEBSITE =======================================
+/*
 import { BrowserRouter } from 'react-router-dom';
 import App from './responsive_website/App';
 
@@ -1270,4 +1271,17 @@ ReactDOM.render(
     <BrowserRouter>
     <App/>
     </BrowserRouter>,
+    document.getElementById('root'))
+*/
+
+// ================================= REDUX =====================================
+
+import App from './redux/App';
+import { Provider } from 'react-redux'
+import { store } from './redux/app/store'
+
+ReactDOM.render(
+    <Provider store={store}>
+     <App/>
+    </Provider>,
     document.getElementById('root'))
